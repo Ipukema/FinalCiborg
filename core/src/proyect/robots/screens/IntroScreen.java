@@ -102,8 +102,8 @@ public class IntroScreen extends MyScreen {
          		batch.end();
              
          		if(Gdx.input.isKeyJustPressed(Input.Keys.ANY_KEY)){
-         			//mapper.loadScreen("stage1", "grey");
-         			game.setScreen(new MenuScreen(game)); 
+         			mapper.loadScreen("stage1", "grey");
+         			//game.setScreen(new MenuScreen(game)); 
          			//game.setScreen(new ShowScoreScreen(game));
          		}    	
         	}          

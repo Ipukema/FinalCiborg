@@ -88,6 +88,7 @@ public class Player extends Png{
     public Rectangle collx, colly;
 	@SuppressWarnings("unused")
 	private boolean contacting; 
+	public static boolean deathScreen;
 	public float width = 8, height= 16;
 	
     public Player(PlayScreen screen, float x, float y, String color) {
@@ -197,45 +198,50 @@ public class Player extends Png{
 			curanim = CustomAnim.getById(anims, "stand");
 		}
 	}	
-	
+	int cont=0;
 	@Override
 	public void Update (float delta){
-		//System.out.println("posicion: "+getX()+ " y: "+getY());
-		//System.out.println(contacting);
-		//System.out.println("posiition: "+position);
+		
 		// TODO
 		//provisional:
 		//armRockets();
 		//shieldPlayer();
-		
-		hp=(float)life/100;
-		
-		if(shielded){
-			shieldTime+=delta;
-			if(shieldTime>=10){
-				shielded=false;
+		if(!died){
+			hp=(float)life/100;
+			
+			if(shielded){
+				shieldTime+=delta;
+				if(shieldTime>=10){
+					shielded=false;
+				}
 			}
-		}
-	
-		if(action != JUMP){
-			getAction(delta);
-			if(state == RUN){
-				footSteps.play();
-				footSteps.setVolume(0.8f*MyGame.fxValue);				
-			}
+		
+			if(action != JUMP){
+				getAction(delta);
+				if(state == RUN){
+					footSteps.play();
+					footSteps.setVolume(0.8f*MyGame.fxValue);				
+				}
+			}else{
+				jump(delta);
+			}		
+			
+			checkPlayerCollisions(delta);
+		
+			pos.x=body.getPosition().x*100;
+			pos.y=body.getPosition().y*100;
+			setX(pos.x);
+			setY(pos.y);
+			bounds.setX(pos.x-2-(width/2));
+			bounds.setY(pos.y-2-(height/2));
+			
 		}else{
-			jump(delta);
+			curanim = CustomAnim.getById(anims, "diyingR");
+			cont++;
+			if(cont>=curanim.getKeyFrames().length){				
+				deathScreen=true;
+			}
 		}		
-		
-		checkPlayerCollisions(delta);
-	
-		pos.x=body.getPosition().x*100;
-		pos.y=body.getPosition().y*100;
-		setX(pos.x);
-		setY(pos.y);
-		bounds.setX(pos.x-2-(width/2));
-		bounds.setY(pos.y-2-(height/2));
-		
 	}
 
     public void checkPlayerCollisions(float delta){
@@ -261,12 +267,13 @@ public class Player extends Png{
     	    			position=HOLDR; 
     	    			contacting=true;
     				}else if (s.equals("Death")){
-    					collx=r;
-    	    			position=GROUND; 
+    					System.out.println("toca en ddeath");
+    					// TODO
+    					collx=r; 
+    					died = true;
     	    			contacting=true;
     				}else if (s.equals("Block")){
     	    			colly=r;
-    	    			position=BLOCK; 
     	    			contacting=true;
     				}
     			}    			
@@ -279,6 +286,7 @@ public class Player extends Png{
         					position=GROUND;
         					colly=null;        					
         				}else if((body.getPosition().y*100<=colly.y)){
+        					position=NONE;
         					body.setLinearVelocity(caer);
         					colly=null;
         				}
@@ -288,6 +296,7 @@ public class Player extends Png{
         					position=GROUND;
         					colly=null;        		
         				}else if((body.getPosition().y*100<=colly.y)){
+        					position=NONE;
         					body.setLinearVelocity(caer);
         					colly=null;        		
         				}
@@ -311,10 +320,12 @@ public class Player extends Png{
     	}  
     	
     	if(position == HOLDU){			
-			if ( (body.getPosition().x*100>=collx.x+collx.width) || (body.getPosition().x*100<collx.x) ){				
+			if ( (body.getPosition().x*100>collx.x+collx.width) || (body.getPosition().x*100<collx.x) ){
+				position=NONE;
 				body.setLinearVelocity(caer);	
 			}
 			 if (Gdx.input.isKeyJustPressed(Input.Keys.ALT_RIGHT)) {
+				 position=NONE;
 				 body.setLinearVelocity(caer);	
 			 }
 		}	

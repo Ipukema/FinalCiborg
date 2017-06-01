@@ -180,7 +180,7 @@ public class MapGenerator{
 	    		 if (object instanceof RectangleMapObject) {
 	    			 Rectangle rect = ((RectangleMapObject) object).getRectangle();
 	    			 Crect r= new Crect(rect, "Death");
-	    			 death.add(r);
+	    			 screen.death.add(r);
 	             }
 	    	 }
 	    	 screen.mapBounds.add(screen.death);
