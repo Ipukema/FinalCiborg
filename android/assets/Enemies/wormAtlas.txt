@@ -1,0 +1,33 @@
+wormAtlas.png
+size: 64, 64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+wormRoll
+  rotate: false
+  xy: 0, 0
+  size: 48, 24
+  orig: 48, 24
+  offset: 0, 0
+  index: -1
+wormShoot
+  rotate: false
+  xy: 48, 0
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+wormShooting
+  rotate: false
+  xy: 0, 24
+  size: 64, 24
+  orig: 64, 24
+  offset: 0, 0
+  index: -1
+wormWalk
+  rotate: false
+  xy: 0, 48
+  size: 64, 16
+  orig: 64, 16
+  offset: 0, 0
+  index: -1

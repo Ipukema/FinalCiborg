@@ -1,0 +1,341 @@
+monkLAW.png
+size: 4096, 2592
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+monkLAWattE
+  rotate: false
+  xy: 1561, 800
+  size: 1561, 128
+  orig: 1561, 128
+  offset: 0, 0
+  index: -1
+monkLAWattN
+  rotate: false
+  xy: 1561, 928
+  size: 1561, 128
+  orig: 1561, 128
+  offset: 0, 0
+  index: -1
+monkLAWattNE
+  rotate: false
+  xy: 0, 928
+  size: 1561, 128
+  orig: 1561, 128
+  offset: 0, 0
+  index: -1
+monkLAWattNO
+  rotate: false
+  xy: 1561, 672
+  size: 1561, 128
+  orig: 1561, 128
+  offset: 0, 0
+  index: -1
+monkLAWattO
+  rotate: false
+  xy: 0, 800
+  size: 1561, 128
+  orig: 1561, 128
+  offset: 0, 0
+  index: -1
+monkLAWattS
+  rotate: false
+  xy: 2456, 544
+  size: 1560, 128
+  orig: 1560, 128
+  offset: 0, 0
+  index: -1
+monkLAWattSE
+  rotate: false
+  xy: 0, 672
+  size: 1561, 128
+  orig: 1561, 128
+  offset: 0, 0
+  index: -1
+monkLAWattSO
+  rotate: false
+  xy: 896, 544
+  size: 1560, 128
+  orig: 1560, 128
+  offset: 0, 0
+  index: -1
+monkLAWdieE
+  rotate: false
+  xy: 0, 2336
+  size: 3200, 128
+  orig: 3200, 128
+  offset: 0, 0
+  index: -1
+monkLAWdieN
+  rotate: false
+  xy: 0, 2208
+  size: 3200, 128
+  orig: 3200, 128
+  offset: 0, 0
+  index: -1
+monkLAWdieNE
+  rotate: false
+  xy: 0, 2464
+  size: 3200, 128
+  orig: 3200, 128
+  offset: 0, 0
+  index: -1
+monkLAWdieNO
+  rotate: false
+  xy: 0, 2080
+  size: 3200, 128
+  orig: 3200, 128
+  offset: 0, 0
+  index: -1
+monkLAWdieO
+  rotate: false
+  xy: 0, 1824
+  size: 3200, 128
+  orig: 3200, 128
+  offset: 0, 0
+  index: -1
+monkLAWdieS
+  rotate: false
+  xy: 0, 1696
+  size: 3200, 128
+  orig: 3200, 128
+  offset: 0, 0
+  index: -1
+monkLAWdieSE
+  rotate: false
+  xy: 0, 1568
+  size: 3200, 128
+  orig: 3200, 128
+  offset: 0, 0
+  index: -1
+monkLAWdieSO
+  rotate: false
+  xy: 0, 1952
+  size: 3200, 128
+  orig: 3200, 128
+  offset: 0, 0
+  index: -1
+monkLAWgethitE
+  rotate: false
+  xy: 2940, 0
+  size: 588, 128
+  orig: 588, 128
+  offset: 0, 0
+  index: -1
+monkLAWgethitN
+  rotate: false
+  xy: 588, 0
+  size: 588, 128
+  orig: 588, 128
+  offset: 0, 0
+  index: -1
+monkLAWgethitNE
+  rotate: false
+  xy: 1764, 0
+  size: 588, 128
+  orig: 588, 128
+  offset: 0, 0
+  index: -1
+monkLAWgethitNO
+  rotate: false
+  xy: 0, 128
+  size: 588, 128
+  orig: 588, 128
+  offset: 0, 0
+  index: -1
+monkLAWgethitO
+  rotate: false
+  xy: 2352, 0
+  size: 588, 128
+  orig: 588, 128
+  offset: 0, 0
+  index: -1
+monkLAWgethitS
+  rotate: false
+  xy: 588, 128
+  size: 589, 128
+  orig: 589, 128
+  offset: 0, 0
+  index: -1
+monkLAWgethitSE
+  rotate: false
+  xy: 1176, 0
+  size: 588, 128
+  orig: 588, 128
+  offset: 0, 0
+  index: -1
+monkLAWgethitSO
+  rotate: false
+  xy: 0, 0
+  size: 588, 128
+  orig: 588, 128
+  offset: 0, 0
+  index: -1
+monkLAWidleE
+  rotate: false
+  xy: 2688, 448
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWidleN
+  rotate: false
+  xy: 1177, 128
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWidleNE
+  rotate: false
+  xy: 2073, 128
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWidleNO
+  rotate: false
+  xy: 0, 256
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWidleO
+  rotate: false
+  xy: 896, 256
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWidleS
+  rotate: false
+  xy: 1792, 352
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWidleSE
+  rotate: false
+  xy: 0, 448
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWidleSO
+  rotate: false
+  xy: 1792, 448
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWmfE
+  rotate: false
+  xy: 2048, 1440
+  size: 2048, 128
+  orig: 2048, 128
+  offset: 0, 0
+  index: -1
+monkLAWmfN
+  rotate: false
+  xy: 0, 1440
+  size: 2048, 128
+  orig: 2048, 128
+  offset: 0, 0
+  index: -1
+monkLAWmfNE
+  rotate: false
+  xy: 0, 1312
+  size: 2048, 128
+  orig: 2048, 128
+  offset: 0, 0
+  index: -1
+monkLAWmfNO
+  rotate: false
+  xy: 2048, 1184
+  size: 2048, 128
+  orig: 2048, 128
+  offset: 0, 0
+  index: -1
+monkLAWmfO
+  rotate: false
+  xy: 2048, 1056
+  size: 2048, 128
+  orig: 2048, 128
+  offset: 0, 0
+  index: -1
+monkLAWmfS
+  rotate: false
+  xy: 0, 1184
+  size: 2048, 128
+  orig: 2048, 128
+  offset: 0, 0
+  index: -1
+monkLAWmfSE
+  rotate: false
+  xy: 0, 1056
+  size: 2048, 128
+  orig: 2048, 128
+  offset: 0, 0
+  index: -1
+monkLAWmfSO
+  rotate: false
+  xy: 2048, 1312
+  size: 2048, 128
+  orig: 2048, 128
+  offset: 0, 0
+  index: -1
+monkLAWwalkE
+  rotate: false
+  xy: 896, 448
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWwalkN
+  rotate: false
+  xy: 2688, 352
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWwalkNE
+  rotate: false
+  xy: 896, 352
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWwalkNO
+  rotate: false
+  xy: 1792, 256
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWwalkO
+  rotate: false
+  xy: 0, 352
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWwalkS
+  rotate: false
+  xy: 2688, 256
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWwalkSE
+  rotate: false
+  xy: 2969, 128
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1
+monkLAWwalkSO
+  rotate: false
+  xy: 0, 544
+  size: 896, 96
+  orig: 896, 96
+  offset: 0, 0
+  index: -1

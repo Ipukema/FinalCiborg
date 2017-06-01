@@ -1,0 +1,26 @@
+FinalBoss1.png
+size: 288, 112
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fb1
+  rotate: false
+  xy: 0, 0
+  size: 96, 112
+  orig: 96, 112
+  offset: 0, 0
+  index: -1
+fb2
+  rotate: false
+  xy: 96, 0
+  size: 96, 112
+  orig: 96, 112
+  offset: 0, 0
+  index: -1
+fb3
+  rotate: false
+  xy: 192, 0
+  size: 96, 112
+  orig: 96, 112
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,82 @@
+drone1.png
+size: 64, 816
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a1
+  rotate: false
+  xy: 0, 0
+  size: 64, 80
+  orig: 64, 80
+  offset: 0, 0
+  index: -1
+a2
+  rotate: false
+  xy: 0, 80
+  size: 64, 80
+  orig: 64, 80
+  offset: 0, 0
+  index: -1
+a3
+  rotate: false
+  xy: 0, 160
+  size: 64, 80
+  orig: 64, 80
+  offset: 0, 0
+  index: -1
+a4
+  rotate: false
+  xy: 0, 240
+  size: 64, 80
+  orig: 64, 80
+  offset: 0, 0
+  index: -1
+at1
+  rotate: false
+  xy: 0, 320
+  size: 64, 80
+  orig: 64, 80
+  offset: 0, 0
+  index: -1
+at2
+  rotate: false
+  xy: 0, 400
+  size: 64, 80
+  orig: 64, 80
+  offset: 0, 0
+  index: -1
+at3
+  rotate: false
+  xy: 0, 480
+  size: 64, 80
+  orig: 64, 80
+  offset: 0, 0
+  index: -1
+at4
+  rotate: false
+  xy: 0, 560
+  size: 64, 80
+  orig: 64, 80
+  offset: 0, 0
+  index: -1
+at5
+  rotate: false
+  xy: 0, 640
+  size: 64, 80
+  orig: 64, 80
+  offset: 0, 0
+  index: -1
+bullet
+  rotate: false
+  xy: 0, 720
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+move
+  rotate: false
+  xy: 0, 736
+  size: 50, 80
+  orig: 50, 80
+  offset: 0, 0
+  index: -1

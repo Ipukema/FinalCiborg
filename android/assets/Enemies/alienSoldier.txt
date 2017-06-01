@@ -1,0 +1,124 @@
+alienSoldier.png
+size: 110, 256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a1
+  rotate: false
+  xy: 55, 25
+  size: 55, 25
+  orig: 55, 25
+  offset: 0, 0
+  index: -1
+a2
+  rotate: false
+  xy: 0, 25
+  size: 55, 25
+  orig: 55, 25
+  offset: 0, 0
+  index: -1
+a3
+  rotate: false
+  xy: 55, 0
+  size: 55, 25
+  orig: 55, 25
+  offset: 0, 0
+  index: -1
+a4
+  rotate: false
+  xy: 0, 0
+  size: 55, 25
+  orig: 55, 25
+  offset: 0, 0
+  index: -1
+r1
+  rotate: false
+  xy: 0, 220
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+r2
+  rotate: false
+  xy: 72, 220
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+r3
+  rotate: false
+  xy: 55, 184
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+r4
+  rotate: false
+  xy: 36, 220
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+s1
+  rotate: false
+  xy: 32, 50
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+s2
+  rotate: false
+  xy: 0, 50
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+t1
+  rotate: false
+  xy: 55, 82
+  size: 55, 34
+  orig: 55, 34
+  offset: 0, 0
+  index: -1
+t2
+  rotate: false
+  xy: 55, 150
+  size: 55, 34
+  orig: 55, 34
+  offset: 0, 0
+  index: -1
+t3
+  rotate: false
+  xy: 0, 116
+  size: 55, 34
+  orig: 55, 34
+  offset: 0, 0
+  index: -1
+t4
+  rotate: false
+  xy: 0, 82
+  size: 55, 34
+  orig: 55, 34
+  offset: 0, 0
+  index: -1
+t5
+  rotate: false
+  xy: 55, 116
+  size: 55, 34
+  orig: 55, 34
+  offset: 0, 0
+  index: -1
+t6
+  rotate: false
+  xy: 0, 150
+  size: 55, 34
+  orig: 55, 34
+  offset: 0, 0
+  index: -1
+t7
+  rotate: false
+  xy: 0, 184
+  size: 55, 34
+  orig: 55, 34
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,131 @@
+BigRobot.png
+size: 450, 747
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a1
+  rotate: false
+  xy: 0, 120
+  size: 150, 120
+  orig: 150, 120
+  offset: 0, 0
+  index: -1
+a2
+  rotate: false
+  xy: 300, 120
+  size: 150, 120
+  orig: 150, 120
+  offset: 0, 0
+  index: -1
+a3
+  rotate: false
+  xy: 150, 120
+  size: 150, 120
+  orig: 150, 120
+  offset: 0, 0
+  index: -1
+a4
+  rotate: false
+  xy: 150, 0
+  size: 150, 120
+  orig: 150, 120
+  offset: 0, 0
+  index: -1
+a5
+  rotate: false
+  xy: 0, 0
+  size: 150, 120
+  orig: 150, 120
+  offset: 0, 0
+  index: -1
+a6
+  rotate: false
+  xy: 300, 0
+  size: 150, 120
+  orig: 150, 120
+  offset: 0, 0
+  index: -1
+die1
+  rotate: false
+  xy: 145, 609
+  size: 100, 138
+  orig: 100, 138
+  offset: 0, 0
+  index: -1
+die2
+  rotate: false
+  xy: 245, 609
+  size: 100, 138
+  orig: 100, 138
+  offset: 0, 0
+  index: -1
+w1
+  rotate: false
+  xy: 0, 486
+  size: 145, 123
+  orig: 145, 123
+  offset: 0, 0
+  index: -1
+w2
+  rotate: false
+  xy: 0, 609
+  size: 145, 123
+  orig: 145, 123
+  offset: 0, 0
+  index: -1
+w3
+  rotate: false
+  xy: 145, 486
+  size: 145, 123
+  orig: 145, 123
+  offset: 0, 0
+  index: -1
+w4
+  rotate: false
+  xy: 145, 240
+  size: 145, 123
+  orig: 145, 123
+  offset: 0, 0
+  index: -1
+w5
+  rotate: false
+  xy: 0, 240
+  size: 145, 123
+  orig: 145, 123
+  offset: 0, 0
+  index: -1
+w6
+  rotate: false
+  xy: 290, 240
+  size: 145, 123
+  orig: 145, 123
+  offset: 0, 0
+  index: -1
+w7
+  rotate: false
+  xy: 145, 363
+  size: 145, 123
+  orig: 145, 123
+  offset: 0, 0
+  index: -1
+w8
+  rotate: false
+  xy: 0, 363
+  size: 145, 123
+  orig: 145, 123
+  offset: 0, 0
+  index: -1
+w9
+  rotate: false
+  xy: 290, 486
+  size: 145, 123
+  orig: 145, 123
+  offset: 0, 0
+  index: -1
+w10
+  rotate: false
+  xy: 290, 363
+  size: 145, 123
+  orig: 145, 123
+  offset: 0, 0
+  index: -1

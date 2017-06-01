@@ -1,0 +1,40 @@
+eye.png
+size: 220, 64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+close
+  rotate: false
+  xy: 0, 0
+  size: 86, 64
+  orig: 86, 64
+  offset: 0, 0
+  index: -1
+open
+  rotate: false
+  xy: 86, 0
+  size: 86, 64
+  orig: 86, 64
+  offset: 0, 0
+  index: -1
+s1
+  rotate: false
+  xy: 172, 0
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+s2
+  rotate: false
+  xy: 188, 0
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+s3
+  rotate: false
+  xy: 204, 0
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1

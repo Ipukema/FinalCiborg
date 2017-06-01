@@ -1,0 +1,145 @@
+miscellanous.png
+size: 6186, 2891
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2colors
+  rotate: false
+  xy: 0, 820
+  size: 1024, 576
+  orig: 1024, 576
+  offset: 0, 0
+  index: -1
+action
+  rotate: false
+  xy: 1024, 820
+  size: 1600, 2071
+  orig: 1600, 2071
+  offset: 0, 0
+  index: -1
+back
+  rotate: false
+  xy: 1195, 0
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: -1
+beated
+  rotate: false
+  xy: 0, 0
+  size: 195, 259
+  orig: 195, 259
+  offset: 0, 0
+  index: -1
+chappieAndMom
+  rotate: false
+  xy: 5356, 0
+  size: 825, 635
+  orig: 825, 635
+  offset: 0, 0
+  index: -1
+chappieBackAndClimbFront
+  rotate: false
+  xy: 2271, 0
+  size: 489, 750
+  orig: 489, 750
+  offset: 0, 0
+  index: -1
+ChappieMe
+  rotate: false
+  xy: 3260, 0
+  size: 640, 360
+  orig: 640, 360
+  offset: 0, 0
+  index: -1
+charging
+  rotate: false
+  xy: 4556, 0
+  size: 800, 800
+  orig: 800, 800
+  offset: 0, 0
+  index: -1
+introText
+  rotate: false
+  xy: 395, 0
+  size: 200, 28
+  orig: 200, 28
+  offset: 0, 0
+  index: -1
+muerto.jpeg
+  rotate: false
+  xy: 2624, 820
+  size: 1642, 788
+  orig: 1642, 788
+  offset: 0, 0
+  index: -1
+OrangeSquareButton
+  rotate: false
+  xy: 995, 0
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+OvercitieChapiie
+  rotate: false
+  xy: 1971, 0
+  size: 300, 168
+  orig: 300, 168
+  offset: 0, 0
+  index: -1
+paintingFull
+  rotate: false
+  xy: 1687, 0
+  size: 284, 177
+  orig: 284, 177
+  offset: 0, 0
+  index: -1
+pencilChappie
+  rotate: false
+  xy: 4266, 820
+  size: 1920, 1080
+  orig: 1920, 1080
+  offset: 0, 0
+  index: -1
+planetbio
+  rotate: false
+  xy: 795, 0
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+planetMech
+  rotate: false
+  xy: 195, 0
+  size: 200, 201
+  orig: 200, 201
+  offset: 0, 0
+  index: -1
+planetThird
+  rotate: false
+  xy: 595, 0
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+portadaEdit
+  rotate: false
+  xy: 3900, 0
+  size: 656, 820
+  orig: 656, 820
+  offset: 0, 0
+  index: -1
+stageSelectBack
+  rotate: false
+  xy: 2760, 0
+  size: 500, 273
+  orig: 500, 273
+  offset: 0, 0
+  index: -1
+whithdog
+  rotate: false
+  xy: 1420, 0
+  size: 267, 189
+  orig: 267, 189
+  offset: 0, 0
+  index: -1

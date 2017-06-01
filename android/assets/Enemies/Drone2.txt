@@ -1,0 +1,47 @@
+Drone2.png
+size: 50, 576
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+s1
+  rotate: false
+  xy: 0, 0
+  size: 50, 96
+  orig: 50, 96
+  offset: 0, 0
+  index: -1
+s2
+  rotate: false
+  xy: 0, 96
+  size: 50, 96
+  orig: 50, 96
+  offset: 0, 0
+  index: -1
+s3
+  rotate: false
+  xy: 0, 192
+  size: 50, 96
+  orig: 50, 96
+  offset: 0, 0
+  index: -1
+s4
+  rotate: false
+  xy: 0, 288
+  size: 50, 96
+  orig: 50, 96
+  offset: 0, 0
+  index: -1
+s5
+  rotate: false
+  xy: 0, 384
+  size: 50, 96
+  orig: 50, 96
+  offset: 0, 0
+  index: -1
+s6
+  rotate: false
+  xy: 0, 480
+  size: 50, 96
+  orig: 50, 96
+  offset: 0, 0
+  index: -1

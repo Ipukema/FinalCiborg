@@ -1,0 +1,61 @@
+alienAppearEffect.png
+size: 1020, 1020
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+00
+  rotate: false
+  xy: 0, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+01
+  rotate: false
+  xy: 340, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+02
+  rotate: false
+  xy: 680, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+03
+  rotate: false
+  xy: 0, 340
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+04
+  rotate: false
+  xy: 340, 340
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+05
+  rotate: false
+  xy: 680, 340
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+06
+  rotate: false
+  xy: 0, 680
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+07
+  rotate: false
+  xy: 340, 680
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1

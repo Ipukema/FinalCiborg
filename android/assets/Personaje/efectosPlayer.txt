@@ -1,0 +1,222 @@
+efectosPlayer.png
+size: 3584, 1876
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+00
+  rotate: false
+  xy: 0, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+01
+  rotate: false
+  xy: 340, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+02
+  rotate: false
+  xy: 680, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+03
+  rotate: false
+  xy: 1020, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+04
+  rotate: false
+  xy: 1360, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+05
+  rotate: false
+  xy: 1700, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+06
+  rotate: false
+  xy: 2040, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+07
+  rotate: false
+  xy: 2380, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+08
+  rotate: false
+  xy: 2720, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+09
+  rotate: false
+  xy: 3060, 0
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 0, 340
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 340, 340
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+12
+  rotate: false
+  xy: 680, 340
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+13
+  rotate: false
+  xy: 1020, 340
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+14
+  rotate: false
+  xy: 1360, 340
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+b
+  rotate: false
+  xy: 1700, 340
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 1
+b
+  rotate: false
+  xy: 2212, 340
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 2
+b
+  rotate: false
+  xy: 2724, 340
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 3
+b
+  rotate: false
+  xy: 0, 852
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 4
+b
+  rotate: false
+  xy: 512, 852
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 5
+b
+  rotate: false
+  xy: 1024, 852
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 6
+b
+  rotate: false
+  xy: 1536, 852
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 7
+b
+  rotate: false
+  xy: 2048, 852
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 8
+b
+  rotate: false
+  xy: 2560, 852
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 9
+b
+  rotate: false
+  xy: 3072, 852
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 10
+b
+  rotate: false
+  xy: 0, 1364
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 11
+b
+  rotate: false
+  xy: 512, 1364
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 12
+b
+  rotate: false
+  xy: 1024, 1364
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 13
+b
+  rotate: false
+  xy: 1536, 1364
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 14
+b
+  rotate: false
+  xy: 2048, 1364
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 15
+b
+  rotate: false
+  xy: 2560, 1364
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 16
