@@ -159,7 +159,6 @@ public class ShowScoreScreen extends MyScreen {
     		nums=splitNumbers(st);
     		posx=450+(this.name.getWidth()*2)+(score.getWidth()*2);
     		for (Integer i:nums){
-    			System.out.println(i);
     			stage.getBatch().draw(numbers.get(i), posx, posy,24,24);
     			posx+=24;
     		}

@@ -2,6 +2,7 @@ package proyect.robots.utils.loaders;
 
 import java.util.ArrayList;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -27,7 +28,10 @@ public class LoadResources {
 	public static TextureRegion redbar, hud;
 	//Settings: 
 	public static TextureRegion logo, bar, note, fx, setBack, backButton;
-	 
+	 //Death screen:
+	public static TextureRegion deathFondo, contText;
+	public static Array<TextureRegion> deathCount;
+	
 	public static ArrayList<TextureRegion> getScoreLetters(){
 		ArrayList<TextureRegion> letras = new ArrayList<TextureRegion>();
 		Texture letters= new Texture("screensAssets/scoreText.png");
@@ -39,8 +43,7 @@ public class LoadResources {
 		int index=0;
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j <=8; j++) {
-				prov[index++]=tmp[i][j];
-					//let.add(tmp[i][j]);			
+				prov[index++]=tmp[i][j];			
 			}
 		}
 		for (int i=0;i<prov.length;i++){
@@ -52,6 +55,22 @@ public class LoadResources {
 	public static void LoadMenu2(){
 		TextureAtlas atlas= new TextureAtlas("Atlas/miscellanous2.txt");
 		fondo = new TextureRegion(atlas.findRegion("pencilChappie"));
+	}
+	
+	public static void LoadDeathScreen(){
+		deathCount = new Array<TextureRegion>();
+		TextureAtlas atlas= new TextureAtlas("screensAssets/deathScreen.txt");
+		deathFondo = new TextureRegion(atlas.findRegion("muerto"));
+		contText = new TextureRegion(atlas.findRegion("conttext"));
+		int col=5;
+		int row=2;
+		TextureRegion reg = new TextureRegion(atlas.findRegion("deathCount"));
+		TextureRegion[][] nums=reg.split(reg.getRegionWidth()/col, reg.getRegionHeight()/row);
+		for (int i=0; i<row; i++) {
+    	    for (int j=0; j<col; j++) {
+    	    	deathCount.add(nums[i][j]);
+    	    }
+    	} 		
 	}
 	
 	public static void loadPauseMenu(){
@@ -165,9 +184,9 @@ public class LoadResources {
 			TextureRegion reg = new TextureRegion(atlas.findRegion(sb2.append(i).toString()));
     		frames.add(reg);
 		}
-		CustomAnim diyingR = new CustomAnim(0.09f,frames,"diyingR");
+		CustomAnim diyingR = new CustomAnim(0.14f,frames,"diyingR");
 		anims.add(diyingR);
-		CustomAnim diyingL = new CustomAnim(0.09f,frames,"diyingL");
+		CustomAnim diyingL = new CustomAnim(0.14f,frames,"diyingL");
 		anims.add(diyingL);
 		frames.clear();		
 		//Hold Sides anims:

@@ -1,4 +1,5 @@
 package proyect.robots.screens;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -69,8 +70,7 @@ public class PlayScreen extends MyScreen {
     public String map2;
     
     public ArrayList<Png> enemies1;
-    public MapGenerator enemiesLoader;
-    
+    public MapGenerator enemiesLoader;    
     
     public HUD hud;
     public Viewport viewport;
@@ -84,6 +84,7 @@ public class PlayScreen extends MyScreen {
     
     public Stage stage;
     public PauseMenu pauseMenu;
+    public DeathScreen deathScreen;
     public static boolean onpause;
     public static int score;
     public static ArrayList<Png> remEnem;
@@ -107,11 +108,7 @@ public class PlayScreen extends MyScreen {
         death = new Array<Crect>();
         block = new Array<Crect>();
         mapBounds = new ArrayList<Array<Crect>>();
-        enemies1 = new ArrayList<Png>();
-        
-       
-        
-        
+        enemies1 = new ArrayList<Png>();        
     }
     
     @Override
@@ -152,6 +149,7 @@ public class PlayScreen extends MyScreen {
 		
 		stage =  new Stage();
 		pauseMenu = new PauseMenu(game, batch);
+		deathScreen = new DeathScreen(game, batch);
 
 		remEnem = new ArrayList<Png>();
 		
@@ -167,7 +165,7 @@ public class PlayScreen extends MyScreen {
 		}
     	//System.out.println("entra update playS");
        world.step(Gdx.graphics.getDeltaTime(), 6, 2);
-       if(!onpause){
+       if(!onpause && !player.isDied()){
     	   player.Update(dt);
     	   Player.bullets.removeAll(remEnem);
     	   Player.remBull.clear();
@@ -196,11 +194,7 @@ public class PlayScreen extends MyScreen {
 		renderer.render();		
 		
 		batch.setProjectionMatrix(camera.combined);
-		enemieBatch.setProjectionMatrix(camera.combined);
-		
-		
-		
-		
+		enemieBatch.setProjectionMatrix(camera.combined);		
 		
 		rend.renderItems(delta, batch);
 		
@@ -216,13 +210,21 @@ public class PlayScreen extends MyScreen {
 		if(onpause){
 			pauseMenu.render(delta);
 		}
+		if (Player.deathScreen){
+			
+			deathScreen.render(delta);
+		}
 		
+		//debugRender();	
+		
+		
+	}
+
+	public void debugRender() {
 		batch.begin();
 		b2dr.render(world, camera.combined.cpy().scale(100, 100, 1));
 		batch.end();
-		drawBounds();	
-		
-		
+		drawBounds();
 	}	
 	
 	private void drawBounds() {
