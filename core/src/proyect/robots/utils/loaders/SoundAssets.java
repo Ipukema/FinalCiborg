@@ -17,17 +17,12 @@ public class SoundAssets {
 	public static Sound playerShoot, misile2, playerShootHit, playerMisileHit;
 	//the enemies effects: 
 	
-	
-	
-	public static void loadMenuAudios(){
+	public static void loadSongs(){
+		stage1Song = Gdx.audio.newMusic(Gdx.files.internal("Sounds/music/intro.mp3"));
 		introSong = Gdx.audio.newMusic(Gdx.files.internal("Sounds/music/stage1.mp3"));
 		saber1= Gdx.audio.newMusic(Gdx.files.internal("Sounds/effects/Lightsaber1.mp3"));
-	}
-	
-	public static void loadStage1Audio(){
-		stage1Song = Gdx.audio.newMusic(Gdx.files.internal("Sounds/music/intro.mp3"));
-		
-	}
+		stage2Song = Gdx.audio.newMusic(Gdx.files.internal("Sounds/music/stage2.mp3"));
+	}	
 	
 	public static void loadPlayerAudio(){
 		playerShoot = Gdx.audio.newSound(

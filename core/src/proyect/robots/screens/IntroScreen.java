@@ -14,6 +14,7 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
 import proyect.robots.MyGame;
+import proyect.robots.screens.Menus.MenuScreen;
 import proyect.robots.utils.loaders.LoadResources;
 import proyect.robots.utils.loaders.MapGenerator;
 import proyect.robots.utils.loaders.SoundAssets;
@@ -41,7 +42,7 @@ public class IntroScreen extends MyScreen {
     @Override
     public void show() {  
     	
-    	SoundAssets.loadMenuAudios();
+    	SoundAssets.loadSongs();
     	camera = new OrthographicCamera();
 		
 		viewport =  new FitViewport(MyGame.GW, MyGame.GH,camera);
@@ -100,11 +101,11 @@ public class IntroScreen extends MyScreen {
          			mssg=0;
          		}    
          		batch.end();
-             
+             //stg1 : 140, 140
          		if(Gdx.input.isKeyJustPressed(Input.Keys.ANY_KEY)){
-         			//mapper.loadScreen("stage1", "grey");
-         			game.setScreen(new MenuScreen(game)); 
-         			//game.setScreen(new ShowScoreScreen(game));
+         			//mapper.loadScreen("stage2", "grey", 2000, 150);
+         			//mapper.loadScreen("stage1", "grey", 2600, 220);
+         			((MyGame) game).setScreenWithFade(new MenuScreen(game), 3);
          		}    	
         	}          
         }       

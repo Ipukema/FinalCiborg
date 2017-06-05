@@ -21,7 +21,7 @@ import com.badlogic.gdx.utils.Array;
 import proyect.robots.MyGame;
 import proyect.robots.entities.Drop;
 import proyect.robots.entities.Png;
-import proyect.robots.screens.PlayScreen;
+import proyect.robots.screens.GameScreen.PlayScreen;
 import proyect.robots.utils.Crect;
 import proyect.robots.utils.CustomAnim;
 import proyect.robots.utils.loaders.LoadResources;
@@ -55,6 +55,7 @@ public class Player extends Png{
     public static float CLIMBSPEED = 1;    
     public final Vector2 caer= new Vector2(0,GRAVITY);
     //Movement control :
+    public Rectangle bounds;
     public static final float MAX_JUMP_SPEED   = 4f;
 	public Vector2 pos = new Vector2();
     public Vector2 speed = new Vector2(0, 0);
@@ -88,10 +89,13 @@ public class Player extends Png{
     public Rectangle collx, colly;
 	@SuppressWarnings("unused")
 	private boolean contacting; 
+	public static boolean deathScreen;
 	public float width = 8, height= 16;
+	public String color;
 	
     public Player(PlayScreen screen, float x, float y, String color) {
 		super(screen, x, y);
+		this.color = color;
 		width= 8;
 		height=16;
 		//init the player elements:
@@ -99,7 +103,7 @@ public class Player extends Png{
 		remBull = new ArrayList<Shoot>();
 		collx = new Rectangle();
 		colly = new Rectangle();
-		bounds = new Rectangle(pos.x-2, pos.y-2, 12, 20);		
+		
 		moveController = new PlayerMovementController(this);
 		//load animations and effects: 
 		anims=LoadResources.loadPlayerAnimations(color);
@@ -111,6 +115,10 @@ public class Player extends Png{
 		misile1= SoundAssets.misile1;
 		misile2 = SoundAssets.misile2;	
 		world= screen.getWorld();
+		died=false;
+		setX(x);
+		setY(y);
+		bounds = new Rectangle(getX()-2, getY()-2, 12, 20);		
 		
 		initializePlayer();		
 	}
@@ -131,7 +139,7 @@ public class Player extends Png{
 		dir=LEFT;	
 		rocketCounter=0;		
 		hp=1;
-		life = 20;
+		life = 100;
 		died = false;
     }
 	
@@ -197,56 +205,66 @@ public class Player extends Png{
 			curanim = CustomAnim.getById(anims, "stand");
 		}
 	}	
-	
+	int cont=0;
 	@Override
 	public void Update (float delta){
-		//System.out.println("posicion: "+getX()+ " y: "+getY());
-		//System.out.println(contacting);
-		//System.out.println("posiition: "+position);
 		// TODO
+		System.out.println("x: "+body.getPosition().x*100+" Y: "+body.getPosition().y*100);
+		//System.out.println("Bounds: x: "+bounds.getX()+" Y: "+bounds.getY());
+		//System.out.println("position: "+position);
+		//System.out.println(" UPDATE rect: x: "+collx.x+" x.w: "+collx.width+" y: "+collx.y+" y.h: "+collx.height);
+		
 		//provisional:
 		//armRockets();
 		//shieldPlayer();
-		
-		hp=(float)life/100;
-		
-		if(shielded){
-			shieldTime+=delta;
-			if(shieldTime>=10){
-				shielded=false;
+		if(!died){
+			hp=(float)life/100;
+			
+			if(shielded){
+				shieldTime+=delta;
+				if(shieldTime>=10){
+					shielded=false;
+				}
 			}
-		}
-	
-		if(action != JUMP){
-			getAction(delta);
-			if(state == RUN){
-				footSteps.play();
-				footSteps.setVolume(0.8f*MyGame.fxValue);				
-			}
+		
+			if(action != JUMP){
+				getAction(delta);
+				if(state == RUN){
+					footSteps.play();
+					footSteps.setVolume(0.8f*MyGame.fxValue);				
+				}
+			}else{
+				jump(delta);
+			}		
+			
+			checkPlayerCollisions(delta);
+		
+			pos.x=body.getPosition().x*100;
+			pos.y=body.getPosition().y*100;
+			setX(pos.x);
+			setY(pos.y);
+			bounds.setX(pos.x-2-(width/2));
+			bounds.setY(pos.y-2-(height/2));
+			
 		}else{
-			jump(delta);
+			curanim = CustomAnim.getById(anims, "diyingR");
+			cont++;
+			if(cont>=curanim.getKeyFrames().length){				
+				deathScreen=true;
+			}
 		}		
-		
-		checkPlayerCollisions(delta);
-	
-		pos.x=body.getPosition().x*100;
-		pos.y=body.getPosition().y*100;
-		setX(pos.x);
-		setY(pos.y);
-		bounds.setX(pos.x-2-(width/2));
-		bounds.setY(pos.y-2-(height/2));
-		
 	}
 
     public void checkPlayerCollisions(float delta){
     	contacting=false;
+    	//System.out.println("cantidad en ground:"+getScreen().ground.size);
     	for (Array<Crect> rs: getScreen().mapBounds){
     		for (Crect r:rs ){
-    			if(r.overlaps(bounds)){    				
+    			if(r.overlaps(bounds)){      		
     				String s= r.getId();
-    				if(s.equals("Ground")){
+    				if(s.equals("Ground")){    					
     					collx=r; 
-    	    			position=GROUND; 
+    	    			position=GROUND;     	    			
     	    			contacting=true;
     				}else if (s.equals("Ceiling")){
     					collx=r;
@@ -261,15 +279,22 @@ public class Player extends Png{
     	    			position=HOLDR; 
     	    			contacting=true;
     				}else if (s.equals("Death")){
-    					collx=r;
-    	    			position=GROUND; 
+    					//System.out.println("toca en ddeath !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
+    					// TODO
+    					collx=r; 
+    					//System.out.println("rect: x: "+collx.x+" x.w: "+collx.width+" y: "+collx.y+" y.h: "+collx.height);
+    					died = true;
     	    			contacting=true;
     				}else if (s.equals("Block")){
     	    			colly=r;
-    	    			position=BLOCK; 
     	    			contacting=true;
     				}
-    			}    			
+    				if (s.equals("Respawn")){
+    					getScreen().respPos=new Vector2(getX(), getY());
+    					System.out.println("Guaarda en : "+getX()+" y: "+getY());
+    					
+    				}
+    			}
     		}
     		if(colly !=null && collx !=null){
     			if(collx.overlaps(colly) && (bounds.overlaps(collx) || (bounds.overlaps(colly)))){
@@ -279,6 +304,7 @@ public class Player extends Png{
         					position=GROUND;
         					colly=null;        					
         				}else if((body.getPosition().y*100<=colly.y)){
+        					position=NONE;
         					body.setLinearVelocity(caer);
         					colly=null;
         				}
@@ -288,6 +314,7 @@ public class Player extends Png{
         					position=GROUND;
         					colly=null;        		
         				}else if((body.getPosition().y*100<=colly.y)){
+        					position=NONE;
         					body.setLinearVelocity(caer);
         					colly=null;        		
         				}
@@ -311,10 +338,12 @@ public class Player extends Png{
     	}  
     	
     	if(position == HOLDU){			
-			if ( (body.getPosition().x*100>=collx.x+collx.width) || (body.getPosition().x*100<collx.x) ){				
+			if ( (body.getPosition().x*100>collx.x+collx.width) || (body.getPosition().x*100<collx.x) ){
+				position=NONE;
 				body.setLinearVelocity(caer);	
 			}
 			 if (Gdx.input.isKeyJustPressed(Input.Keys.ALT_RIGHT)) {
+				 position=NONE;
 				 body.setLinearVelocity(caer);	
 			 }
 		}	
@@ -364,4 +393,12 @@ public class Player extends Png{
 			died=true;
 		}
 	}	
+	
+	public void respawnPlayer(float x, float y){
+		life=100;
+		shieldPlayer();
+		rocket=false;
+		rocketCounter=0;
+		body.setTransform(new Vector2(x,y), 1);
+	}
 }

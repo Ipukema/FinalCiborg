@@ -11,8 +11,14 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.Array;
 
 import proyect.robots.MyGame;
-import proyect.robots.entities.Enemies.*;
-import proyect.robots.screens.PlayScreen;
+import proyect.robots.entities.Enemies.LVL1.BigRobot;
+import proyect.robots.entities.Enemies.LVL1.Drone1;
+import proyect.robots.entities.Enemies.LVL1.Drone2;
+import proyect.robots.entities.Enemies.LVL1.FinalBoss1;
+import proyect.robots.entities.Enemies.LVL2.Eye;
+import proyect.robots.entities.Enemies.LVL2.Finalboss2;
+import proyect.robots.entities.Enemies.LVL2.Worm;
+import proyect.robots.screens.GameScreen.PlayScreen;
 import proyect.robots.utils.Crect;
 
 public class MapGenerator{
@@ -30,6 +36,8 @@ public class MapGenerator{
 	public static Music stage1Song, stage2Song;
 	
 	public Game game;
+	public Music currentSong;
+	public Array<Music> songs = new Array<Music>();
 	
 	public MapGenerator(Game game){		
 		this.game=game;
@@ -39,41 +47,99 @@ public class MapGenerator{
 		 left = new Array<Rectangle>();
 		 death = new Array<Rectangle>();
 		 block = new Array<Rectangle>();
-		 mapBounds = new ArrayList<Array<Rectangle>>();		 
+		 mapBounds = new ArrayList<Array<Rectangle>>();	
+		 songs.add(SoundAssets.stage1Song);
+		 songs.add(SoundAssets.stage2Song);
+		 songs.add(SoundAssets.introSong);
 	}
 	
-	public void loadScreen(String map, String playerColor){
+	public void loadScreen(String map, String playerColor, float x, float y){
+		if(SoundAssets.introSong.isPlaying()){
+			SoundAssets.introSong.stop();
+		}
 		SoundAssets.loadPlayerAudio();
-		PlayScreen screen = new PlayScreen(this.game, map, playerColor);
+		PlayScreen screen = new PlayScreen(this.game, map, playerColor, x, y);
 		loadCollisions(screen);
 		
 		if(map.equals("stage1")){
-			LoadMap1(screen);
+			LoadMap1(screen);			
 		}else if(map.equals("stage2")){
 			LoadMap2(screen);
 		}else if(map.equals("stage3")){
 			
 		}
-		game.setScreen(screen);
+		((MyGame) game).setScreenWithFade(screen, 4);
 	}
 	
 	
 	
 	private void LoadMap2(PlayScreen screen2) {
-		
+		currentSong= SoundAssets.stage2Song;
+		try{
+			for(Music m:songs){
+				if(m.isPlaying()){
+					m.stop();
+				}			
+			}	
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			addLvl2Enemies(screen2);
+			screen2.setSong(currentSong);
+		}		
 	}
 
 	public void LoadMap1(PlayScreen screen){
-		SoundAssets.loadStage1Audio();
 		SoundAssets.introSong.stop();
-		SoundAssets.introSong.dispose();
-		stage1Song = SoundAssets.stage1Song;
-		stage1Song.setLooping(true);
-		stage1Song.play();
-		stage1Song.setVolume(MyGame.musicValue);
-		addLvl1Enemies(screen);		
+		currentSong= SoundAssets.stage1Song;
+		try{
+			for(Music m:songs){
+				if(m.isPlaying()){
+					m.stop();
+				}			
+			}	
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{		
+			addLvl1Enemies(screen);		
+			screen.setSong(currentSong);
+		}
 	}
-
+	public void addLvl2Enemies(PlayScreen screen){
+		new Worm(screen, 70, 210, "ground");
+		new Worm(screen, 250, 195, "ground");
+		new Worm(screen, 397, 195, "ground");
+		new Worm(screen, 661, 210, "ground");
+		new Worm(screen, 916, 140, "ground");
+		new Worm(screen, 1150, 190, "ground");
+		new Worm(screen, 502, 85, "ground");
+		new Worm(screen, 675, 85, "ground");
+		new Worm(screen, 1380, 190, "ground");
+		new Worm(screen, 1660, 130, "ground");
+		new Worm(screen, 1850, 160, "ground");
+		new Worm(screen, 2070, 260, "ground");
+		new Worm(screen, 1940, 260, "ground");
+		//ceiling worms
+		new Worm(screen, 770, 150, "ceiling");
+		new Worm(screen, 1200, 240, "ceiling");
+		new Worm(screen, 1385, 210, "ceiling");
+		new Worm(screen, 1700, 170, "ceiling");
+		//eyes:
+		new Eye(screen, 556, 200);
+		new Eye(screen, 710, 170);
+		new Eye(screen, 265, 130);
+		new Eye(screen, 425, 130);
+		new Eye(screen, 615, 100);	
+		new Eye(screen, 1830, 170);
+		new Eye(screen, 1690, 170);
+		new Eye(screen, 1200, 240);
+		new Eye(screen, 1300, 180);
+		new Eye(screen, 1515, 200);
+		new Eye(screen, 200, 150);
+		//and boss:
+		new Finalboss2(screen, 2060, 80);
+	}
+	
 	public void addLvl1Enemies(PlayScreen screen) {
 		new BigRobot(screen,71,195);
 		new BigRobot(screen,300,68);
@@ -94,8 +160,8 @@ public class MapGenerator{
 		new BigRobot(screen,1770,55);
 		new BigRobot(screen,1700,55);
 		new BigRobot(screen,1700,230);
-		new BigRobot(screen,1860,240);
-		new BigRobot(screen,2000,240);
+		new BigRobot(screen,1860,260);
+		new BigRobot(screen,2000,260);
 		
 		new Drone1(screen, 150, 180);
 		new Drone1(screen, 440, 90);
@@ -180,9 +246,20 @@ public class MapGenerator{
 	    		 if (object instanceof RectangleMapObject) {
 	    			 Rectangle rect = ((RectangleMapObject) object).getRectangle();
 	    			 Crect r= new Crect(rect, "Death");
-	    			 death.add(r);
+	    			 screen.death.add(r);
 	             }
 	    	 }
 	    	 screen.mapBounds.add(screen.death);
+	    	 
+	    	 MapObjects objects7 = screen.map.getLayers().get("Respawn").getObjects();
+			 
+	    	 for(MapObject object : objects7) {
+	    		 if (object instanceof RectangleMapObject) {
+	    			 Rectangle rect = ((RectangleMapObject) object).getRectangle();
+	    			 Crect r= new Crect(rect, "Respawn");
+	    			 screen.respawn.add(r);
+	             }
+	    	 }
+	    	 screen.mapBounds.add(screen.respawn);
 	    }
 }

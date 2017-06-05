@@ -6,14 +6,21 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
+import proyect.robots.entities.Enemies.LVL1.BigRobot;
+import proyect.robots.entities.Enemies.LVL1.Drone1;
+import proyect.robots.entities.Enemies.LVL1.Drone2;
+import proyect.robots.entities.Enemies.LVL1.FinalBoss1;
+import proyect.robots.entities.Enemies.LVL2.Eye;
+import proyect.robots.entities.Enemies.LVL2.Finalboss2;
+import proyect.robots.entities.Enemies.LVL2.Worm;
 import proyect.robots.entities.player.PlayerMovementController;
-import proyect.robots.screens.PlayScreen;
+import proyect.robots.screens.GameScreen.PlayScreen;
 import proyect.robots.utils.Crect;
 
 public class FocusedShoot extends Sprite{
 	
 	public Rectangle bounds;
-	public static  float SPEED = 1.5f;
+	public static  float SPEED = 0.5f;
 	public PlayerMovementController player;
 	public Vector2 pos;
 	public Vector2 posIni;
@@ -62,25 +69,7 @@ public class FocusedShoot extends Sprite{
 		initAngle=angle;
 	}
 	
-	public FocusedShoot(AlienSoldier p, String type, double angle, PlayScreen screen) {	
-		super(p);
-		this.screen=screen;
-		bullet = new Texture(type);
-		switch (p.sdir){		
-			case L:
-				bounds = new Rectangle(p.shootBounds.getX(), p.shootBounds.getY(), 4, 4);				
-				break;
-			case R:
-				bounds = new Rectangle(p.shootBounds.getX(), p.shootBounds.getY(), 4, 4);
-				break;
-			default:
-				break;
-		}
-		pos = new Vector2(p.shootBounds.getX(), p.shootBounds.getY());
-		initAngle=angle;
-	}
-	
-	 public FocusedShoot(Drone1 p, Texture type, double angle, PlayScreen screen) {
+	public FocusedShoot(Drone1 p, Texture type, double angle, PlayScreen screen) {
 		 super(p);
 			this.screen=screen;
 			bullet = type;
@@ -102,6 +91,60 @@ public class FocusedShoot extends Sprite{
 		super(p);
 		this.screen=screen2;
 		bullet = ball;
+		switch (p.sdir){		
+			case L:
+				bounds = new Rectangle(p.shootBounds.getX(), p.shootBounds.getY(), 4, 4);				
+				break;
+			case R:
+				bounds = new Rectangle(p.shootBounds.getX(), p.shootBounds.getY(), 4, 4);
+				break;
+			default:
+				break;
+		}
+		pos = new Vector2(p.shootBounds.getX(), p.shootBounds.getY());
+		initAngle=angle;
+	}
+
+	public FocusedShoot(Eye p, String type, double angle, PlayScreen screen2) {
+		super(p);
+		this.screen=screen2;
+		bullet = new Texture(type);
+		switch (p.sdir){		
+			case L:
+				bounds = new Rectangle(p.shootBounds.getX(), p.shootBounds.getY(), 4, 4);				
+				break;
+			case R:
+				bounds = new Rectangle(p.shootBounds.getX(), p.shootBounds.getY(), 4, 4);
+				break;
+			default:
+				break;
+		}
+		pos = new Vector2(p.shootBounds.getX(), p.shootBounds.getY());
+		initAngle=angle;
+	}
+
+	public FocusedShoot(Finalboss2 p, String type, double angle, PlayScreen screen2) {
+		super(p);
+		this.screen=screen2;
+		bullet = new Texture(type);
+		switch (p.sdir){		
+			case L:
+				bounds = new Rectangle(p.shootBounds.getX(), p.shootBounds.getY(), 4, 4);				
+				break;
+			case R:
+				bounds = new Rectangle(p.shootBounds.getX(), p.shootBounds.getY(), 4, 4);
+				break;
+			default:
+				break;
+		}
+		pos = new Vector2(p.shootBounds.getX(), p.shootBounds.getY());
+		initAngle=angle;
+	}
+
+	public FocusedShoot(Drone2 p, String type, double angle, PlayScreen screen2) {
+		super(p);
+		this.screen=screen2;
+		bullet = new Texture(type);
 		switch (p.sdir){		
 			case L:
 				bounds = new Rectangle(p.shootBounds.getX(), p.shootBounds.getY(), 4, 4);				

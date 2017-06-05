@@ -1,0 +1,26 @@
+deathScreen.png
+size: 620, 421
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+conttext
+  rotate: false
+  xy: 0, 0
+  size: 96, 32
+  orig: 96, 32
+  offset: 0, 0
+  index: -1
+deathCount
+  rotate: false
+  xy: 96, 0
+  size: 312, 123
+  orig: 312, 123
+  offset: 0, 0
+  index: -1
+muerto
+  rotate: false
+  xy: 0, 123
+  size: 620, 298
+  orig: 620, 298
+  offset: 0, 0
+  index: -1

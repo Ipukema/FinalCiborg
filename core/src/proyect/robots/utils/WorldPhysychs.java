@@ -10,7 +10,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 
-import proyect.robots.screens.PlayScreen;
+import proyect.robots.screens.GameScreen.PlayScreen;
 
 public class WorldPhysychs {
 	public World world;
@@ -31,10 +31,9 @@ public class WorldPhysychs {
 		GenerateBodys("Ceiling");
 		GenerateBodys("Left");
 		GenerateBodys("Right");
-		GenerateBodys("Block");
 		GenerateBodys("Death");	
-		}
-	
+		GenerateBodys("Block");
+	}	
 	
 	public void GenerateBodys(String capa){
 		for(MapObject object: map.getLayers().get(capa).getObjects()){
@@ -46,56 +45,6 @@ public class WorldPhysychs {
            shape.setAsBox(rect.getWidth() / 2 /100, rect.getHeight() / 2 / 100);
            fdef.shape = shape;
            body.createFixture(fdef);
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		}		
+	}	
 }
