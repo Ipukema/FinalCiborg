@@ -1,3 +1,4 @@
+
 package proyect.robots.entities.Enemies.LVL1;
 
 import java.util.ArrayList;
@@ -216,4 +217,3 @@ public class BigRobot extends Png{
 		frames.clear();
 	}
 }
-

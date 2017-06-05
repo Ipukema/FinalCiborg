@@ -1,3 +1,4 @@
+
 package proyect.robots.utils;
 
 import com.badlogic.gdx.maps.MapObject;

@@ -12,7 +12,6 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
 import proyect.robots.entities.Enemies.FocusedShoot;
-import proyect.robots.entities.Enemies.LVL2.Eye.ShootingDir;
 import proyect.robots.screens.GameScreen.PlayScreen;
 import proyect.robots.utils.CustomAnim;
 import proyect.robots.utils.loaders.LoadResources;

@@ -24,7 +24,7 @@ task dist(type: Jar) {
         attributes 'Main-Class': project.mainClassName
     }
 }
-compile "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+//compile "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
 dist.dependsOn classes
 
 eclipse {

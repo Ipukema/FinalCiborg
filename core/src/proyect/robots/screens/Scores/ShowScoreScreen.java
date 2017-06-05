@@ -1,3 +1,4 @@
+
 package proyect.robots.screens.Scores;
 
 import java.util.ArrayList;
@@ -200,5 +201,5 @@ public class ShowScoreScreen extends MyScreen {
         batch.dispose();
         font.dispose();
         stage.dispose();
-    }	
+    }
 }

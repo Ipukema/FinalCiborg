@@ -1,3 +1,4 @@
+
 package proyect.robots;
 
 
@@ -58,37 +59,4 @@ public class MyGame extends Game {
 	        }
 	    }
 	
-}/* private Actor fadeActor = new Actor();
-    private ShapeRenderer fadeRenderer;
-
-    public void create (){ 
-        //...your create() code
-
-        fadeRenderer = new ShapeRenderer(8);
-    }
-
-    public void setScreenWithFade (final Screen screen, float duration) {
-        fadeActor.clearActions();
-        fadeActor.setColor(Color.CLEAR);
-        fadeActor.addAction(Actions.sequence(
-            Actions.color(Color.BLACK, duration/2f, Interpolation.fade),
-            Actions.run(new Runnable(){public void run(){setScreen(screen);}}),
-            Actions.color(Color.CLEAR, duration/2f, Interpolation.fade)
-        ));
-    }
-
-    @Override
-    public void render (){
-        super.render();
-
-        fadeActor.act(Gdx.graphics.getDeltaTime());
-        float alpha = fadeActor.getColor().a;
-        if (alpha != 0){
-            fadeRenderer.begin(ShapeType.Filled);
-            fadeRenderer.setColor(0, 0, 0, alpha);
-            fadeRenderer.rect(-1, -1, 2, 2); //full screen rect w/ identity matrix
-            fadeRenderer.end();
-        }
-    }
-
-}*/
+}

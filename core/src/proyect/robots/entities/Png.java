@@ -185,3 +185,4 @@ public abstract class Png extends Sprite{
 		this.currentState = currentState;
 	}
 }
+

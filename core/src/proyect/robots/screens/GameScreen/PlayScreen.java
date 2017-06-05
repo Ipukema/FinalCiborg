@@ -342,5 +342,4 @@ public class PlayScreen extends MyScreen {
 		return player;
 	}
 	
-	
 }
